@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Joke View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DVMJokeViewController" customModule="ChuckNorrisJokeOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rh-qC-XUC">
+                                <rect key="frame" x="116.5" y="764" width="181" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Get New Joke"/>
+                                <connections>
+                                    <action selector="fetchJokeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pvA-GC-Cwk"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="3E6-0g-aWo">
+                                <rect key="frame" x="0.0" y="94" width="414" height="183"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMk-mH-gIN">
+                                <rect key="frame" x="40" y="327" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMk-mH-gIN" secondAttribute="trailing" constant="40" id="17x-aX-OS2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2rh-qC-XUC" secondAttribute="bottom" constant="50" id="F0Q-8h-MAc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3E6-0g-aWo" secondAttribute="trailing" id="ZG1-6S-v9f"/>
+                            <constraint firstItem="3E6-0g-aWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZIA-Vz-sDx"/>
+                            <constraint firstItem="SMk-mH-gIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="eIa-xa-8sk"/>
+                            <constraint firstItem="3E6-0g-aWo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="efF-e7-Gbq"/>
+                            <constraint firstItem="SMk-mH-gIN" firstAttribute="top" secondItem="3E6-0g-aWo" secondAttribute="bottom" constant="50" id="fFj-KO-cpR"/>
+                            <constraint firstItem="2rh-qC-XUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uab-lQ-qzp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="jokeLabel" destination="SMk-mH-gIN" id="K58-pN-pOo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="download" width="275" height="183"/>
+    </resources>
+</document>
